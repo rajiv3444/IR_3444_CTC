@@ -1,7 +1,7 @@
 console.log("entering static passsword");
 
 var _isCredSubmitted = false;
-_Cc_staticPassword = "AAA@aaa3"
+_Cc_staticPassword = "******"
 
 
 if (!_isCredSubmitted) {
