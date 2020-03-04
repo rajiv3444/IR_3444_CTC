@@ -15,7 +15,7 @@ function inputCredential() {
     //document.getElementById("showpassword").click();
 
     //document.querySelectorAll('[type=submit]')[0].click(); // for OTP
-    document.querySelectorAll('[type=submit]')[1].click(); // for STATIC PWD
+    //document.querySelectorAll('[type=submit]')[1].click(); // for STATIC PWD
 
     _isCredSubmitted = true;
     clearTimeout(timer_cred);

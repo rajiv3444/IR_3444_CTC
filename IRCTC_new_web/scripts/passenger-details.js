@@ -308,7 +308,7 @@ function booking_review_page_handle() {
 
 function selectPaymentModeCreditDebitHdfc() {
   /** temppppppppppppp */
-  //return;
+  // return;
   //document.getElementById('ui-tabpanel-9-label').click();
 
   Array.from(document.querySelectorAll("[role=tab]"))
@@ -324,7 +324,7 @@ function selectPaymentModeCreditDebitHdfc() {
   //     }
   // }
 
-  document.getElementById("credit_21").click();
+  document.getElementById("credit_115").click();
 
   Array.from(document.querySelectorAll("button"))
     .find(el => el.textContent === "Make Payment")
