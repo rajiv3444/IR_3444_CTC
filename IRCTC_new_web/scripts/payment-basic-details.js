@@ -3,11 +3,11 @@ _cardType = 'VISA';
 //MC: Master Card
 //VISA : Visa Card
 
-_cardNumber = '456456456456456';
-_cardExpiryMonth = 2; //1,2,3,....9,10,11,12 -----> NOT '02' or '03' or 04...
-_cardExpiryYearYYYY = 'dgdfgd';
-_cardCVV = '34543457';
-_cardHolderName = '345345';
+_cardNumber = '4893kkkkxxxpxxx'; // without space/hiphen
+_cardExpiryMonth = 2; //in single digit as number. e.g: 1,2,3,..,10,11 -----> NOT '02' or '10'
+_cardExpiryYearYYYY = '2222';
+_cardCVV = '111';
+_cardHolderName = 'Rajiv Kumar';
 
 _waitTime1sec = 1000;
 _waitTime2sec = 2000;
