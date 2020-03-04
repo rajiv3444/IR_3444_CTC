@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Rajiv_IRCTC_Autofill_New_website",
+  "description": "This extension will AUTOFILL details on IRCTC new website. Developer : Rajiv Bhardwaj (8000-940-940)",
+  "version": "2.0.1",
+
+  "browser_action": {
+    "default_icon": "rajiv.png"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": ["scripts/jquery-2.1.1.min.js"]
+  },
+  "content_scripts": [{
+      "js": ["scripts/jquery-2.1.1.min.js", "scripts/boot.js", "scripts/passenger-details.js"],
+      "matches": ["https://*.irctc.co.in/*", "http://*.irctc.co.in/*"]
+    },
+    {
+      "matches": ["https://securepayments.fssnet.co.in/hdfcbankb/paymentpage.htm*"],
+      "js": ["scripts/jquery-2.1.1.min.js", "scripts/payment-basic-details.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["file:///C:/Users/Rajiv/Downloads/IRCTC%20razor%20pay/Pay%20via%20Razorpay.html*"],
+      "js": ["scripts/jquery-2.1.1.min.js", "scripts/payment-basic-razorpay.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://netsafe.hdfcbank.com/ACSWeb/authJsp/authImprovedTxnPage.jsp*"],
+      "js": ["scripts/jquery-2.1.1.min.js", "scripts/payment-cred.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": ["tabs", "https://*/*", "http://*/*", "storage", "gcm"]
+}

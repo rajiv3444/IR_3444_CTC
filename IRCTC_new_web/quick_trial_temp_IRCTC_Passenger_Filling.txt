@@ -1,0 +1,34 @@
+
+CLIPBOARD:
+
+ https://netsafe.hdfcbank.com/ACSWeb/authJsp/authImprovedTxnPage.jsp
+ STATIC
+
+https://www.irctc.co.in/nget/reviewBooking -- DONE
+
+https://www.irctc.co.in/nget/bkgPaymentOptions  -- DONE
+Payment Gateway / Credit Card / Debit Card
+Visa/Master Card(Powered By HDFC BANK)
+    
+RAZOR PAYMENT
+https://checkout.razorpay.com/orders/order_CeldpBVjqQu98Q?x_ranid=Celdp60hjXNRGv
+https://checkout.razorpay.com/orders/order_CezHLuzlNPPlVP?x_ranid=CezHLqBJHG5nzb
+
+
+    document.getElementById('form-fields');
+    document.querySelector('[tab=card]').click();
+    document.getElementById('card_number').value = '4893772405647765';
+    document.getElementById('card_expiry').value = '02/22';
+    document.getElementById('card_name').value = 'rajiv kumar';
+    document.getElementById('card_cvv').value = '357';
+    document.querySelector('[type=submit]').click();
+    document.getElementsByClassName('btn')[0].click();
+
+COMPLETED
+    -- REVIEW BOOKING PAGE -- DONE
+    -- INSURANCE RADIO - SELECT ----- DONE BUT VERIFY
+
+TODO
+    -- SENIOR CETZON CONCESSION --- NEED TO VERIFY
+    -- PAYMENT OTP PAGE - REDUCE TIMEOUT ----- TODO
+    -- SELECT TATKAL FROM DROPDOWN ---- IN PROGRESS
