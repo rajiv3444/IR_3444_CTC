@@ -22,7 +22,7 @@
     },
     {
       "matches": ["https://www4.ipg-online.com/connect/gateway/*"],
-      "js": ["scripts/jquery-2.1.1.min.js", "data/data-payment.js",  "scripts/payment-icici.js"],
+      "js": ["scripts/jquery-2.1.1.min.js", "data/data-card.js",  "scripts/payment-icici.js"],
       "run_at": "document_end"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "matches": ["https://netsafe.hdfcbank.com/ACSWeb/authJsp/authImprovedTxnPage.jsp*"],
-      "js": ["scripts/jquery-2.1.1.min.js",  "data/data-payment.js", "scripts/payment-cred.js"],
+      "js": ["scripts/jquery-2.1.1.min.js",  "data/data-card.js", "scripts/payment-cred.js"],
       "run_at": "document_end"
     }
   ],
