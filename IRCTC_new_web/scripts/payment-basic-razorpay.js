@@ -1,10 +1,4 @@
 
-_cardNumber = '46456456456456456';
-_cardExpiryMMYY = '02/22'; //1,2,3,....9,10,11,12 -----> NOT '02' or '03' or 04...
-//_cardExpiryYearYYYY = '2022';
-_cardCVV = '456456';
-_cardHolderName = 'Rajiv Kumar';
-
 
 setTimeout(startAutofillPayment, 1000);
 

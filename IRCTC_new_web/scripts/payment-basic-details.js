@@ -3,11 +3,11 @@ _cardType = 'VISA';
 //MC: Master Card
 //VISA : Visa Card
 
-_cardNumber = '4893kkkkxxxpxxx'; // without space/hiphen
-_cardExpiryMonth = 2; //in single digit as number. e.g: 1,2,3,..,10,11 -----> NOT '02' or '10'
-_cardExpiryYearYYYY = '2222';
-_cardCVV = '111';
-_cardHolderName = 'Rajiv Kumar';
+_cardNumber = _CARD_DETAIL.CardNumber; 
+_cardExpiryMonth = _CARD_DETAIL.CardExpiryMonth; //in single digit as number. e.g: 1,2,3,..,10,11 -----> NOT '02' or '10'
+_cardExpiryYearYYYY = _CARD_DETAIL.CardExpiryYearYYYY; // 
+_cardCVV = _CARD_DETAIL.CardCVV;
+_cardHolderName = _CARD_DETAIL.CardHolderName;
 
 _waitTime1sec = 1000;
 _waitTime2sec = 2000;
@@ -18,7 +18,10 @@ console.log('%c Autofill plugin execution started !', 'background: #06a4f8; colo
 console.log("---------------------------------------");
 
 
+// below method call is not in use now, cuz currently using ICICI payment page and 
+// this program have seperate method and file for icici payment automation
 AutoFillPaymentDetail();
+
 timer_bindEventToClickSubmitOnEnterKey = setTimeout(bindEventToClickSubmitOnEnterKey, offsetDelayDuration);
 
 

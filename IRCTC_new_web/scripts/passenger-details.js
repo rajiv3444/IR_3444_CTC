@@ -4,17 +4,26 @@ developerMode = true;
 var _quotaChoiceShortNm = "TQ";
 _needAutoupgrade = true;
 _bookOnlyIfConfirmBerthAvailable = false;
-_mobileNumber = "8000940940";
+_mobileNumber = _MOBILE_NUMBER;
 _food_choice_Veg = "V";
 _food_choice_NonVeg = "N";
 _need_bedroll = false;
-_passergerList = [
-  {
-    name: "sumit",
-    age: "30",
-    gender: "M"
-  }
-];
+
+
+_passergerList = _psngrData_json;
+
+// alert(_passergerList[0].name);
+// alert(_passergerList[0].age);
+// alert(_passergerList[1].name);
+// alert(_passergerList[1].age);
+
+// _passergerList = [
+//   {
+//     name: "sumit",
+//     age: "30",
+//     gender: "M"
+//   }
+// ];
 
 /************************************************* */
 
@@ -49,10 +58,10 @@ function AutoFillPassengerDetail() {
     if (!pass_details_div_all[i]) {
       console.log(
         "textbox for passenger-" +
-          i +
-          "-" +
-          p.name +
-          " is not generated. Clicking on ADD PASSENGER"
+        i +
+        "-" +
+        p.name +
+        " is not generated. Clicking on ADD PASSENGER"
       );
       //click add passenger
       var add_pass_links = document.querySelectorAll("a span.prenext");
@@ -90,7 +99,7 @@ function AutoFillPassengerDetail() {
       .dispatchEvent(new Event("blur"));
     current_passenger_div.querySelector(
       "div.form-group:nth-of-type(3) select"
-    ).value = p.gender;
+    ).value = p.gender.toUpperCase();
     current_passenger_div
       .querySelector("div.form-group:nth-of-type(3) select")
       .dispatchEvent(new Event("change"));
@@ -146,7 +155,6 @@ function AutoFillPassengerDetail() {
     // }
   }
 
-  //fillOtherDetailsPassengerPage();
   var timer_fillOtherDetailsPassengerPage = setTimeout(
     fillOtherDetailsPassengerPage,
     100
@@ -201,6 +209,21 @@ function fillOtherDetailsPassengerPage() {
       */
 }
 
+
+function clickSubmitButtonOnPsngerPage() {
+  var availableSubmitButtons = document.querySelectorAll("button[type='submit']");
+  for (var i = 0; i < availableSubmitButtons.length; i++) {
+    if (document.querySelectorAll("button[type='submit']")[i].textContent == "Continue ") {
+      // Submit---- continue to next pge
+      document.querySelectorAll("button[type='submit']")[i].click();
+      clearInterval(_timerIntervalSubmitButton);
+      break;
+    }
+  }
+}
+
+
+
 var captcha_timer_id = guidGenerator();
 
 var captcha_seconds = 0;
@@ -211,18 +234,18 @@ function foucs_pass_page_captcha() {
   if (document.querySelector(".passengerDivSep  #captcha")) {
     $(
       '<div id="' +
-        captcha_timer_id +
-        '" style="background-color: #000; width: 36px; color: white; font-size: 20px;">00</div><div style="background-color: #000; width: 100%; color: white; font-size: 20px;">Type captcha and click Next after 10 seconds</div><br>'
+      captcha_timer_id +
+      '" style="background-color: #000; width: 36px; color: white; font-size: 20px;">00</div><div style="background-color: #000; width: 100%; color: white; font-size: 20px;">Type captcha and click Next after 10 seconds</div><br>'
     ).insertBefore($("#captcha").parent());
   } else if (document.querySelector("#ShowNLPCaptcha")) {
     $(
       '<div id="' +
-        captcha_timer_id +
-        '" style="background-color: #000; width: 36px; color: white; font-size: 20px;">00</div><div style="background-color: #000; width: 100%; color: white; font-size: 20px;">Type captcha and click Next after 10 seconds</div><br>'
+      captcha_timer_id +
+      '" style="background-color: #000; width: 36px; color: white; font-size: 20px;">00</div><div style="background-color: #000; width: 100%; color: white; font-size: 20px;">Type captcha and click Next after 10 seconds</div><br>'
     ).insertBefore($("#ShowNLPCaptcha").parent());
   }
 
-  captcha_timer = setInterval(function() {
+  captcha_timer = setInterval(function () {
     if (!window.location.href.match("/psgninput")) {
       captcha_seconds = 0;
       clearInterval(captcha_timer);
@@ -253,7 +276,7 @@ function foucs_pass_page_captcha() {
 }
 
 function guidGenerator() {
-  var S4 = function() {
+  var S4 = function () {
     return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
   };
   return (
@@ -294,16 +317,18 @@ function booking_review_page_handle() {
   //     //current_state_being_processed = "";
   // }
 
-  if (document.querySelector(".passenger_details button[type='submit']")) {
-    if (
-      document.querySelector(".passenger_details button[type='submit']")
-        .textContent == "Continue Booking"
-    ) {
-      document
-        .querySelector(".passenger_details button[type='submit']")
-        .click();
-    }
-  }
+
+
+  // if (document.querySelector(".passenger_details button[type='submit']")) {
+  //   if (
+  //     document.querySelector(".passenger_details button[type='submit']")
+  //       .textContent == "Continue Booking"
+  //   ) {
+  //     document
+  //       .querySelector(".passenger_details button[type='submit']")
+  //       .click();
+  //   }
+  // }
 }
 
 function selectPaymentModeCreditDebitHdfc() {

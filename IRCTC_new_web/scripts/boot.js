@@ -20,7 +20,7 @@ timer_startAutomationOnInterval = setInterval(startAutomationOnInterval, 1000);
 
 
 function startAutomationOnInterval() {
-    console.log('startAutomationOnInterval()')
+    console.log('startAutomationOnInterval()');
 
     /*************************** PASSENGER ********************************* */
     //if Train list page found: call the method and clear the timer
@@ -28,6 +28,7 @@ function startAutomationOnInterval() {
         console.log("PASSENGER PAGE FOUND /psgninput...");
         if (!_IS_PASSENGER_PAGE_DONE) {
             AutoFillPassengerDetail();
+            _timerIntervalSubmitButton = setInterval(clickSubmitButtonOnPsngerPage, 400);
             //return;
         }
 

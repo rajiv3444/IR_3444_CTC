@@ -1,7 +1,7 @@
 console.log("entering static passsword");
 
 var _isCredSubmitted = false;
-_Cc_staticPassword = "******"
+_Cc_staticPassword = _CARD_DETAIL.StaticPwd;//"TEMP"
 
 
 if (!_isCredSubmitted) {
