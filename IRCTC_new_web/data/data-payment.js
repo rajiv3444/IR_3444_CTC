@@ -1,8 +1,8 @@
 _CARD_DETAIL = {
-    CardNumber: '4893772405647765',
+    CardNumber: '56745674567',
     CardExpiryMonth: 2,
-    CardExpiryYearYYYY: 2022,
+    CardExpiryYearYYYY: 2222,
     CardCVV: '111',
-    CardHolderName: 'Rajiv Kumar',
-    StaticPwd : 'AAA@aaa3'
+    CardHolderName: 'test ',
+    StaticPwd : 'dfsfD234'
 }
